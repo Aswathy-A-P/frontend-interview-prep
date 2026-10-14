@@ -1,6 +1,7 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import CartPage from './features/cart/CartPage.tsx';
 import FeedRoutes from './features/feed/FeedRoutes.tsx';
+import KanbanPage from './features/kanban/KanbanPage.tsx';
 import HomePage from './pages/HomePage.tsx';
 import { cn } from './lib/cn.ts';
 import { questions } from './questions.ts';
@@ -40,6 +41,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/feed/*" element={<FeedRoutes />} />
+          <Route path="/kanban" element={<KanbanPage />} />
           <Route path="*" element={<p>Page not found.</p>} />
         </Routes>
       </main>
