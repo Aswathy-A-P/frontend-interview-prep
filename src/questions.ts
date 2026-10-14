@@ -24,4 +24,11 @@ export const questions: Question[] = [
     path: '/kanban',
     summary: 'Add, edit and move cards across three columns by drag and drop or keyboard.',
   },
+  {
+    number: 4,
+    title: 'Live Dashboard',
+    path: '/dashboard',
+    summary:
+      'A self-refreshing dashboard that pauses while the tab is hidden and remembers which widgets you show.',
+  },
 ];
