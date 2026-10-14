@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --color-ink: #1f2328;
+  --color-surface: #f6f8fa;
+  --color-border: #d0d7de;
+  --color-muted: #57606a;
+  --color-accent: #2563eb;
+  --color-accent-strong: #1d4ed8;
+  --color-danger: #dc2626;
+  --color-success: #16a34a;
+}
+
+@layer base {
+  body {
+    @apply bg-surface font-sans leading-normal text-ink;
+  }
+}
