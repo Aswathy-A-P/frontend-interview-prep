@@ -15,9 +15,6 @@ function have(bin) {
   }
 }
 
-// Only lint when eslint is actually installed locally. If node_modules isn't set up,
-// no-op rather than block every edit with a spurious "eslint not found" — CI and the
-// husky pre-commit still enforce linting.
 function eslintInstalled() {
   const dir = path.join(process.cwd(), 'node_modules', '.bin');
   return ['eslint', 'eslint.cmd', 'eslint.CMD', 'eslint.ps1'].some((b) => fs.existsSync(path.join(dir, b)));
@@ -33,11 +30,9 @@ function run(cmd) {
 }
 
 function lintCommand(p) {
-  // Write/Edit pass an absolute file_path — make it project-relative before matching src/.
   const rel = path.relative(process.cwd(), p).replace(/\\/g, '/');
   if (!/^src\/.*\.(t|j)sx?$/.test(rel)) return null;
   if (!eslintInstalled()) return null;
-  // pnpm project — resolve the locally-installed eslint (npx --no-install does not find it).
   if (have('pnpm')) return `pnpm exec eslint --max-warnings=0 "${p}"`;
   if (have('npx')) return `npx --no-install eslint --max-warnings=0 "${p}"`;
   return null;
