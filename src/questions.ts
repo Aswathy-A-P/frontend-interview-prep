@@ -5,4 +5,11 @@ export interface Question {
   summary: string;
 }
 
-export const questions: Question[] = [];
+export const questions: Question[] = [
+  {
+    number: 5,
+    title: 'Comments with Offline Support',
+    path: '/comments',
+    summary: 'Post comments optimistically, queue them offline and retry without duplicates.',
+  },
+];
