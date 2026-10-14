@@ -6,7 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const { readPayload, allow, surfaceToModel, extractFileEdit } = require('./_util.cjs');
 
-const LINTED_SOURCE = /^src\/.*\.(t|j)sx?$/;
+const LINTED_SOURCE = /^src\/.*\.tsx?$/;
 
 function localEslintEntry() {
   const entry = path.join(process.cwd(), 'node_modules', 'eslint', 'bin', 'eslint.js');

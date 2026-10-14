@@ -46,21 +46,21 @@ function withFixture(relPath, content, fn) {
 
 ok(edit('', '') === 0, 'no file path is allowed');
 ok(edit('docs/notes.md', '# hi') === 0, 'unmatched extension (.md) is allowed');
-ok(edit('README.md', '# lambdabooks-web') === 0, 'root README is allowed');
-ok(edit('vite.config.js', 'export default {}') === 0, 'non-src js file is allowed');
+ok(edit('README.md', '# frontend-interview-prep') === 0, 'root README is allowed');
+ok(edit('vite.config.ts', 'export default {}') === 0, 'non-src ts file is allowed');
 
 if (eslintInstalled()) {
-  withFixture('src/_hook_lint_fixture_clean.jsx', 'export const sum = (a, b) => a + b;\n', () => {
-    ok(edit('src/_hook_lint_fixture_clean.jsx', 'export const sum = (a, b) => a + b;\n') === 0, 'clean src file is allowed');
+  withFixture('src/_hook_lint_fixture_clean.tsx', 'export const sum = (a: number, b: number): number => a + b;\n', () => {
+    ok(edit('src/_hook_lint_fixture_clean.tsx', 'export const sum = (a: number, b: number): number => a + b;\n') === 0, 'clean src file is allowed');
   });
-  withFixture('src/_hook_lint_fixture_bad.jsx', 'export const X = () => { const unused = 1; return null; };\n', () => {
+  withFixture('src/_hook_lint_fixture_bad.tsx', 'export const X = () => { const unused = 1; return null; };\n', () => {
     ok(
-      edit('src/_hook_lint_fixture_bad.jsx', 'export const X = () => { const unused = 1; return null; };\n') === 2,
+      edit('src/_hook_lint_fixture_bad.tsx', 'export const X = () => { const unused = 1; return null; };\n') === 2,
       'src file with unused var is surfaced (eslint)'
     );
   });
 } else {
-  ok(edit('src/_fixture.jsx', 'export const X = () => null;') === 0, 'src file allowed when eslint not installed');
+  ok(edit('src/_fixture.tsx', 'export const X = () => null;') === 0, 'src file allowed when eslint not installed');
   skip('node_modules/.bin/eslint absent — eslint lint cases skipped');
 }
 
