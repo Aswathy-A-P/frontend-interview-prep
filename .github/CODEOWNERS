@@ -1,0 +1,17 @@
+/CLAUDE.md @adithya-s-edstem
+/.claude/ @adithya-s-edstem
+/.gitleaks.toml @adithya-s-edstem
+/.github/CODEOWNERS @adithya-s-edstem
+/.github/PULL_REQUEST_TEMPLATE.md @adithya-s-edstem
+/.github/workflows/claude-pr-review.yml @adithya-s-edstem
+
+# Project-specific
+
+# Every file in this repository is owned by its author.
+* @Aswathy-A-P
+/CLAUDE.md @Aswathy-A-P
+/.claude/ @Aswathy-A-P
+/.gitleaks.toml @Aswathy-A-P
+/.github/CODEOWNERS @Aswathy-A-P
+/.github/PULL_REQUEST_TEMPLATE.md @Aswathy-A-P
+/.github/workflows/claude-pr-review.yml @Aswathy-A-P
