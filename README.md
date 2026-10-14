@@ -22,6 +22,18 @@ pnpm dev          # http://localhost:5173
 
 Stack: Vite, React 19, TypeScript (strict), React Router, Tailwind CSS, Vitest, Testing Library, ESLint, Prettier.
 
+## Claude Code harness
+
+`CLAUDE.md` and `.claude/` hold the Claude Code harness: guardrail hooks (secrets, unsafe shell
+commands, commits to `main`, lint on edit), the repo's conventions, and the workflow skills
+`/create-issue`, `/start-issue`, `/raise-pr`, `/pr-review` and `/fix-review-comments`. The repo's own
+values live under `## Project-specific` in `CLAUDE.md`.
+
+| Command | What it does |
+|---|---|
+| `node .claude/harness/verify.cjs` | Check the harness files against the shared set |
+| `node .claude/hooks/tests/run-all.cjs` | Run the guardrail hook tests |
+
 ## Questions
 
 | # | Question | PR link |
