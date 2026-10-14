@@ -1,4 +1,5 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
+import FeedRoutes from './features/feed/FeedRoutes.tsx';
 import HomePage from './pages/HomePage.tsx';
 import { cn } from './lib/cn.ts';
 import { questions } from './questions.ts';
@@ -36,6 +37,7 @@ function App() {
       <main className="mx-auto max-w-6xl px-6 py-10 sm:py-12">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/feed/*" element={<FeedRoutes />} />
           <Route path="*" element={<p>Page not found.</p>} />
         </Routes>
       </main>
