@@ -7,6 +7,12 @@ export interface Question {
 
 export const questions: Question[] = [
   {
+    number: 1,
+    title: 'Shopping Cart',
+    path: '/cart',
+    summary: 'Add products to a persisted cart with stock-limited quantities and 18% tax totals.',
+  },
+  {
     number: 2,
     title: 'Infinite Feed',
     path: '/feed',
