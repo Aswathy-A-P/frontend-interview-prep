@@ -3,6 +3,7 @@ import CartPage from './features/cart/CartPage.tsx';
 import FeedRoutes from './features/feed/FeedRoutes.tsx';
 import KanbanPage from './features/kanban/KanbanPage.tsx';
 import DashboardPage from './features/dashboard/DashboardPage.tsx';
+import CommentsPage from './features/comments/CommentsPage.tsx';
 import HomePage from './pages/HomePage.tsx';
 import { cn } from './lib/cn.ts';
 import { questions } from './questions.ts';
@@ -44,6 +45,7 @@ function App() {
           <Route path="/feed/*" element={<FeedRoutes />} />
           <Route path="/kanban" element={<KanbanPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/comments" element={<CommentsPage />} />
           <Route path="*" element={<p>Page not found.</p>} />
         </Routes>
       </main>
