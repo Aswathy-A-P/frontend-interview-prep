@@ -7,6 +7,8 @@ export type BoardAction =
   | { type: 'delete'; cardId: string }
   | { type: 'move'; cardId: string; toColumn: ColumnId; toIndex: number };
 
+export const APPEND = Number.POSITIVE_INFINITY;
+
 export interface CardLocation {
   column: ColumnId;
   index: number;

@@ -19,4 +19,6 @@ export const COLUMNS: { id: ColumnId; title: string }[] = [
   { id: 'done', title: 'Done' },
 ];
 
+export const DRAG_FORMAT = 'text/plain';
+
 export const EMPTY_BOARD: Board = { todo: [], inProgress: [], done: [] };
