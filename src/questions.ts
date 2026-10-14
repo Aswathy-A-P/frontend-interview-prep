@@ -5,4 +5,11 @@ export interface Question {
   summary: string;
 }
 
-export const questions: Question[] = [];
+export const questions: Question[] = [
+  {
+    number: 3,
+    title: 'Kanban Board',
+    path: '/kanban',
+    summary: 'Add, edit and move cards across three columns by drag and drop or keyboard.',
+  },
+];
