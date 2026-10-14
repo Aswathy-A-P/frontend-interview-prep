@@ -38,10 +38,10 @@ values live under `## Project-specific` in `CLAUDE.md`.
 
 | # | Question | PR link |
 |---|---|---|
-| 1 | Shopping Cart | |
-| 2 | Infinite Feed | |
-| 3 | Kanban Board | |
-| 4 | Live Dashboard | |
-| 5 | Comments with Offline Support | |
+| 1 | Shopping Cart | [#12](https://github.com/Aswathy-A-P/frontend-interview-prep/pull/12) |
+| 2 | Infinite Feed | [#9](https://github.com/Aswathy-A-P/frontend-interview-prep/pull/9) |
+| 3 | Kanban Board | [#8](https://github.com/Aswathy-A-P/frontend-interview-prep/pull/8) |
+| 4 | Live Dashboard | [#11](https://github.com/Aswathy-A-P/frontend-interview-prep/pull/11) |
+| 5 | Comments with Offline Support | [#10](https://github.com/Aswathy-A-P/frontend-interview-prep/pull/10) |
 
 **Video:**
